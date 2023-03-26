@@ -15,7 +15,7 @@ namespace Bloggie.Web.Repositories
                 configuration.GetSection("Cloudinary")["ApiKey"],
                 configuration.GetSection("Cloudinary")["ApiSecret"]);
         }
-        public async Task<string> UploadAsync(IFormFile file)
+        public async Task<string?> UploadAsync(IFormFile file)
         {
             var client = new Cloudinary(account);
             // Upload
